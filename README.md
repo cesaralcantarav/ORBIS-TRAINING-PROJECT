@@ -3,3 +3,5 @@ Capacitación: Git, bash y docker
 Integrantes:
 - Cesar Alcantara
 - Pedro Pairazaman
+
+Scrum Master Sol
