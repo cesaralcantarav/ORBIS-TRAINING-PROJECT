@@ -1,0 +1,17 @@
+version: '2'
+services:
+  nginx:
+    image: ronaldgcr/orbis-training-docker:0.3.0
+    ports: 
+      - 1080:80
+  mysql:
+    image: mysql:5.5
+    ports:
+      - 3309:3306  
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: db_docker
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 123456
+    command: mysqld --sql_mode=""
+  

@@ -1,14 +1,16 @@
 .DEFAULT_GOAL := help
 BUILD_TIMESTAMP ?= `date +%Y%m%d`
-TAG_DEV			= ronaldgcr/orbis-training-docker:0.2.1
+TAG_DEV			= ronaldgcr/orbis-training-docker:0.3.0
 
 login: ## login de docker: make login
 	@docker login
 
 build: ## construccion de la imagen: make build
 	cp PREGUNTAS.md docker/node/
+	cp Readme.md docker/node/
 	docker build -f docker/node/Dockerfile -t $(TAG_DEV) docker/node/
 	rm docker/node/PREGUNTAS.md 
+	rm docker/node/Readme.md
 
 all-images: ## Lista todas las imagenes: make all-images
 	docker image

@@ -1,11 +1,10 @@
-from node:10.11.0-slim
+from nginx:alpine
 
 ENV APP_DIR=/app
 
 WORKDIR $APP_DIR
 
 COPY PREGUNTAS.md /app
+COPY Readme.md /app
 
-RUN ls $APP_DIR
 
-RUN cat $APP_DIR/PREGUNTAS.md
