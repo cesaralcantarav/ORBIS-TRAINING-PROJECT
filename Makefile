@@ -1,5 +1,6 @@
 .DEFAULT_GOAL := help
-TAG_DEV			= ronaldgcr/orbis-training-docker:0.2.0
+BUILD_TIMESTAMP ?= `date +%Y%m%d`
+TAG_DEV			= ronaldgcr/orbis-training-docker:0.2.$(BUILD_TIMESTAMP)
 
 login: ## login de docker: make login
 	@docker login
