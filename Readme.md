@@ -27,3 +27,7 @@
     Para la identificacion el dockerhub
 ## 9. ¿Que pasa si creo una imagen sin especificar una versión o tag, con qué versión se crea?
     latest
+
+
+
+    docker run -it -v "$(pwd)/app/:/app" -w "/app"  ronaldgcr/orbis-training-docker:0.4.0 npm install

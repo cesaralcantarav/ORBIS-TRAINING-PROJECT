@@ -1,16 +1,14 @@
 .DEFAULT_GOAL := help
 BUILD_TIMESTAMP ?= `date +%Y%m%d`
-TAG_DEV			= ronaldgcr/orbis-training-docker:0.3.0
+TAG_DEV			= ronaldgcr/orbis-training-docker:0.4.0
+install:
+	docker run -it -v "$(pwd)/app/:/app" -w "/app"  $(TAG_DEV) npm install		
 
 login: ## login de docker: make login
 	@docker login
 
 build: ## construccion de la imagen: make build
-	cp PREGUNTAS.md docker/node/
-	cp Readme.md docker/node/
 	docker build -f docker/node/Dockerfile -t $(TAG_DEV) docker/node/
-	rm docker/node/PREGUNTAS.md 
-	rm docker/node/Readme.md
 
 all-images: ## Lista todas las imagenes: make all-images
 	docker image

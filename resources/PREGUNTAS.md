@@ -43,4 +43,7 @@ docker run ronaldgcr/orbis-training-docker:0.2
    
 3. ¿Cómo especifico los puertos al levantar un contenedor (docker run)?
 4. 
-5. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?    
+5. ¿Cómo hago 'forward' al levantar un contenedor (docker run)?    +
+
+6. ¿Qué pasa si no especifico el directorio de trabajo?
+no podre ejecutar el comando
